@@ -1,4 +1,4 @@
-
+// The Monitor shows the action across the neurons
 var Monitor = function(i,j) {
     this.write_buffer = [];
     this.read_buffer = [];
@@ -34,7 +34,12 @@ var Monitor = function(i,j) {
     };
 }
 
-var m;
+var i = 200;
+var j = 50
+var m = new Monitor(i,j);
+setInterval(function() { m.output() }, 20);
+
+
 var Neuron = function(i,j,o) {
     this.i = i;
     this.j = j;
@@ -44,6 +49,7 @@ var Neuron = function(i,j,o) {
     };
     this.o = o;
 };
+
 Neuron.prototype.message = function() {
     m.touch(this.i,this.j);
     if (this.listening) {
@@ -54,14 +60,15 @@ Neuron.prototype.message = function() {
 	setTimeout(function() {
 	    // first test, send all messages to all neighbors
 	    for (var ii = 0; ii < x.o.length; ii++) {
-		if (Math.random() > 0.96999999) {
+		if (Math.random() > 0.75) {
 		    x.o[ii].message();
 		}
 	    }
 	    x.listening = 0;
-	}, 20);
+	}, 5);
     }
 };
+
 Neuron.prototype.toString = function() {
     return "[N "+this.i+"."+this.j+"]";
 };
@@ -76,12 +83,8 @@ Output.prototype.toString = function() {
     return "[O "+this.j+"]";
 };
 
-var i = 200;
-var j = 50
-m = new Monitor(i,j);
-setInterval(function() { m.output() }, 20);
 
-// let's make a row of 3 outputs
+// let's make a row of j outputs
 var outputs = [];
 for (var jj = 0; jj < j; jj++) {
     outputs.push(new Output(jj));
@@ -89,17 +92,26 @@ for (var jj = 0; jj < j; jj++) {
 
 // let's make rows of neurons in a chain
 var current_output = outputs;
+var a = 2;
 for (var ii = 1; ii < i; ii++) {
     // let's make each row with neurons, and connect each neuron in a
     // row with every neuron in the next row.
     var new_output = [];
     for (var jj = 0; jj < j; jj++) {
-	new_output.push(new Neuron(ii, jj, current_output));
+	var part_of_output = [];
+	for (var jjj = (jj-a<0?0:jj-a);
+	     ((jjj <= (jj+a)) && (jjj < j));
+	     jjj++) {
+	    part_of_output.push(current_output[jjj]);
+	}
+	new_output.push(new Neuron(ii, jj, part_of_output));
     }
     current_output = new_output;
 }
 
 // the inputs are the base of the chain
 var inputs = current_output;
-
-setInterval(function() { var x = Math.floor(Math.random() * j); inputs[x].message() }, 20);
+setInterval(function() {
+    var x = Math.floor(Math.random() * j);
+    inputs[x].message();
+}, 10);

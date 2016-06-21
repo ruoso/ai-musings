@@ -1,3 +1,3 @@
 #!/bin/bash
 
-xterm -geometry 200x52 -e nodejs main.js
+xterm -geometry 266x42 -e nodejs main.js

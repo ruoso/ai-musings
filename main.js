@@ -10,13 +10,11 @@ var brain_c = 40;
 var map_w = 40;
 var map_h = 130;
 
-var m = new Monitor(brain_r,brain_c,map_w,map_h);
-var s = new Snake(brain_r,brain_c,Neuron,Output, m);
-var w = new SnakeWorld(map_w, map_h, m);
-var p = new SnakePosition(w,m,s);
-
-w.overlay([ p ]);
-
+var s = new Snake(brain_r, brain_c, Neuron, Output);
+var w = new SnakeWorld(map_w, map_h);
+var p = new SnakePosition(w, s);
+var m = new Monitor(brain_r, brain_c, w, [ p ]);
+m.start();
 setInterval(function() {
     m.output();
 }, 40);

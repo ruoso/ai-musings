@@ -60,3 +60,22 @@ The physical disposition of the neurons should facilitate the following reflexes
 * Eating reflex: if the smell of food is too strong, open mouth to eat.
 * Hunger reflex: if the hunger is too high, turn to the side with the stronger smell.
 * Pain reflex: if a wall gets too close, stop moving.
+## 2016-06-23
+### 1
+The model of the snake with a brain that has its Neurons behaving randomly worked exactly as planned. The snake itself will move randomly, and sometimes even move across the entire board, proving that the mechanism by which messages originated on one side of the brain can cause behavior by watching the outputs on the other side.
+### 2
+I just realized I didn’t implement the sense of smell or sight yet. Back to work on the model.
+## 2016-06-24
+### 1
+The next question is how to operate the Neuron. There is a balance to be found between creating complexity and producing enough output.
+If the Neuron is too selective on how to propagate data, there will not be enough signal to drive the network. If it is too generous, there will be too much signal, and the complexity will be erased.
+### 2
+My first attempt at solving this problem will go with a simple machinery:
+* Each Neuron has a time for processing signal, from not being active, to receiving the first message to processing all the messages.
+* When the first message arrives, a timer starts and the Neuron will start recording the messages for this cycle.
+* When the timer runs out, the list of messages will be quantized into a lower-resolution representation of the distribution of the messages over time.
+* That lower-resolution representation will be hashed into buckets, one for each output.
+* A message is sent to the output that matches the hashing.
+## 2016-06-26
+ ### 1
+After implementing that logic, it is clear that more complexity is necessary in order to build the kind of behavior. One immediate thing to attempt is making sure every output also feeds an input.

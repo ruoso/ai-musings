@@ -4,7 +4,7 @@ var Output        = require("./lib/Output.js");
 var Snake         = require("./lib/Snake.js");
 var Rules         = require("./lib/Rules.js");
 
-var brain_r = 20;
+var brain_r = 30;
 var brain_c = 40;
 var map_w = 130;
 var map_h = 40;

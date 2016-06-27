@@ -77,5 +77,14 @@ My first attempt at solving this problem will go with a simple machinery:
 * That lower-resolution representation will be hashed into buckets, one for each output.
 * A message is sent to the output that matches the hashing.
 ## 2016-06-26
- ### 1
+### 1
 After implementing that logic, it is clear that more complexity is necessary in order to build the kind of behavior. One immediate thing to attempt is making sure every output also feeds an input.
+## 2016-06-27
+### 1
+The overall behavior of the brain matches my expectations, but the behavior of the snake is not evolving in the way I expected. I am not yet giving up, tho. I suspect that the biggest problem may be on the initial wiring that needs to be just right for the bootstrap to happen.
+### 2
+The bootstrap as it is now, is causing the snake to just keep turning over and over again. I suspect the layout of the connections is not achieving what I expect.
+### 3
+Designing such layout by hand actually goes against the notion that this should be emerging behavior of the self-organization of the neurons.
+### 4
+The logical next step is to encode this in a way that the entire configuration of the brain is represented as a single string that can be randomized and evolved as a genetic algorithm.

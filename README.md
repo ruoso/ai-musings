@@ -88,3 +88,8 @@ The bootstrap as it is now, is causing the snake to just keep turning over and o
 Designing such layout by hand actually goes against the notion that this should be emerging behavior of the self-organization of the neurons.
 ### 4
 The logical next step is to encode this in a way that the entire configuration of the brain is represented as a single string that can be randomized and evolved as a genetic algorithm.
+## 2016-06-30
+### 1
+The genetic algorithm to evolve the snake favoring those who eat more and move more is proving successful. After evolving for 200 generations, the snake presented a functional behavior of exploring the map and seemed to be directed towards the food.
+### 2
+Longer run seems to be converging to better and better outcomes. In the map with 52 pieces of food, 200 generations were sufficient to bring it down to 48, sometimes 46. After 350 generations, it’s already down to 46, sometimes 43.

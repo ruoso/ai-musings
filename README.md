@@ -93,3 +93,10 @@ The logical next step is to encode this in a way that the entire configuration o
 The genetic algorithm to evolve the snake favoring those who eat more and move more is proving successful. After evolving for 200 generations, the snake presented a functional behavior of exploring the map and seemed to be directed towards the food.
 ### 2
 Longer run seems to be converging to better and better outcomes. In the map with 52 pieces of food, 200 generations were sufficient to bring it down to 48, sometimes 46. After 350 generations, it’s already down to 46, sometimes 43.
+## 2016-07-06
+### 1
+Test run reached a local limit as the snake did something that would give a high return but that would prevent it from developing further. It was a high payout that was difficult to overcome.
+### 2
+Realized that this was driven by the environment itself, which always had the food in rows, favoring this kind of obstinate design. Switching now to a map design where food gets randomly placed, but still on average, equally spaced across the map. I hope this should favor more adaptable designs.
+### 3
+This, of course, means we’re back from 39 to 49 in the count of food left, but that’s ok. It also means we should get a more adaptable snake from the evolution process.

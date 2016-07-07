@@ -187,15 +187,15 @@ function gen_generation(stream, count) {
 
 configs = [];
 for (var i = 0; i < 20; i++) {
-    configs.push({ config: "bf684ab2537e6ea10a6dbb88aa2ba89f549a11e742dbd6c7e1439c2aac3258e48821cc3e37d1e92e48b3aada3529e4638a54dcdc3d7be7d8b47fb291de7b39dd04d6c242c380c1a793e6589e8ce856e3ce44691a51867588bdacc52c7779a66ed8a85e9b3ebf18d6be690e4b97284c2030a31c4316e6c7df021972f1adb7318efb5cdce765d60c88b92453cde17c3f7e1eb7c2b3c5cdb2dbccd8c82c36c052b05675cdc71663ec2068eca5912da8d3a9d218fba8679e85566b43775df2e58477a90e1b41c35b061bb6eba37cde121401f0da4d4e6d2e4443def82b6a7593c2f7c688195ad5cc45b6864ddc1bb62a4bef3ab8c9142bae9f3a682f85176e49a1429ccfdc60443515b1564663893599215628ad6c731b61ebbd1e0e6d217362d142d969f14ca2e4c28b1917b15ded88c0535a27866626e5ba31863891bcc505bcbb4d6cc1dc37b1dcd2abfb01cd447d1e184b01976a12b01b39d91aed1d0c124993925db95b1857153a183e667dd292ca855e182a6a9152db869d09ad38c4a15602195e6b4741a46191c5de8a96d5d1fcca", rules: { food_left: function() { 0 }, snake_odometer: function() {} }});
+    configs.push({ config: "bf68db29657e6e120a6dbb88aa2ba89f549a111442dbd6c76d439c2af35558e48821cc3e37d1e92948b3aada3529e4fb8a54dcdc8a7be7d8b47fdc91117b39dd04d6c242c380c15c93e658a28ce856e3ce44691a515275a3bdacd72c5479b68396a85e9b3ebf18d6be690e4b97284c2030a37c4316e6c7df021972f1adb7318efbd4dce765d67488b92453cde136177e1eb757b3dccdaddbccd8c82c36c052b056759ec71663ec2068eca5912da8d3a9d2befba8679e85566b43775df2e5a577f50e1b41c35b061bb6eba37cdecc1401f0da4d876d2e4487def82b7c7593c2f7c688195ac1cc45b6864ddc1b102a4bef3ab8c9142bae9f3a682f8b17c949a12b9ccfdc60d63515b1934663893599215628ad69739761ebbd1e0e6d217362d142d969134ca2e4c2731917b15d5a886a535aa37e66b1e5f131863891bcc598bc68116cc1dc37b1dcd2abfb01cd307d1e184b019e6a7db31b39d92eed1d0c124947925db95b189d153a183e66f7d292ca855e182a6a9152db869d09ad38c4a15602195e6b4741a46191c5de8a96d5d1fcca", rules: { food_left: function() { 0 }, snake_odometer: function() {} }});
 }
 
 // evolve
-fs.open('generations.log', 'w', function(err, stream) {
-    if (err) {
-	throw err;
-    }
-    gen_generation(stream,  number_of_generations);
-});
+//fs.open('generations.log', 'w', function(err, stream) {
+//    if (err) {
+//	throw err;
+//    }
+//    gen_generation(stream,  number_of_generations);
+//});
 // or do the winning run
-// winning_run();
+ winning_run();

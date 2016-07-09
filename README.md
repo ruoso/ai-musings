@@ -100,3 +100,10 @@ Test run reached a local limit as the snake did something that would give a high
 Realized that this was driven by the environment itself, which always had the food in rows, favoring this kind of obstinate design. Switching now to a map design where food gets randomly placed, but still on average, equally spaced across the map. I hope this should favor more adaptable designs.
 ### 3
 This, of course, means we’re back from 39 to 49 in the count of food left, but that’s ok. It also means we should get a more adaptable snake from the evolution process.
+## 2016-07-08
+### 1
+Read a very good paper today. Made me realize that I was taking the approach for the evolution in a sub-optimal way. The paper covered how the “artificial life” was driven by the emergent behavior that produced self preservation.
+That made me realize that I needed to actually have all snakes at the same time and just allow them to die naturally if they didn’t eat and reproduce them when they do eat. This should drive the evolution with a more concrete goal than what I was using.
+The paper was “The artificial life roots of artificial intelligence” by Luc Steels.
+### 2
+I now have the new evolution going and I will see where it takes us.

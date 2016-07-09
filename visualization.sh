@@ -1,3 +1,3 @@
 #!/bin/bash
 
-xterm -geometry 266x42 -e nodejs visualization.js "$@"
+xterm -geometry 266x62 -e nodejs visualization.js "$@"

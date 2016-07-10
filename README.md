@@ -107,3 +107,12 @@ That made me realize that I needed to actually have all snakes at the same time 
 The paper was “The artificial life roots of artificial intelligence” by Luc Steels.
 ### 2
 I now have the new evolution going and I will see where it takes us.
+## 2016-07-09
+### 1
+The evolution using the new method has resulted in a virtuous cycle. The behavior of the snakes is definitely analogous to that of an alive insect.
+### 2
+One important part of this process was changing two things:
+* The snakes all now spawn from the same point, forcing them to traverse the same journey as their predecessors. This removes the chance factor of a snake just happening to be spawned near food where others would be spawned farther away. This reduced the noise in the evolution  making the natural selection more precise in evaluating the “better fitted” DNA.
+* The size of the food piece was blown up to 10, making it easier for a snake to eat by getting close by. When I was starting with a small food, it was too large a gap to be achieved by chance, so the evolutionary process did not happen and the snakes would all get extinct, and prevent the evolution from happening.
+### 3
+Now I am slowly reducing the size of the food, 8 for now, and running the evolution again. My expectation is that by slowly reducing the food size we will select the snakes with better aim. I hope that we can get back to food of size 1 by the end of this process and still have the snakes successfully consuming all the food.

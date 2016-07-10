@@ -116,3 +116,11 @@ One important part of this process was changing two things:
 * The size of the food piece was blown up to 10, making it easier for a snake to eat by getting close by. When I was starting with a small food, it was too large a gap to be achieved by chance, so the evolutionary process did not happen and the snakes would all get extinct, and prevent the evolution from happening.
 ### 3
 Now I am slowly reducing the size of the food, 8 for now, and running the evolution again. My expectation is that by slowly reducing the food size we will select the snakes with better aim. I hope that we can get back to food of size 1 by the end of this process and still have the snakes successfully consuming all the food.
+### 4
+Reduced the food size to 2. The beginning of the simulation was not smooth, went to the brink of extinction, but after a while, the natural selection managed to select the snakes that can get a 2x2 food piece.
+I will let it evolve even more for a while, before going back to a food of size 1, at which point we will be ready to jump to the next stage of this research.
+The DNA winning so far is: 
+
+```
+d2e340324a2d0142655a22b26bca753d0291312273904da02c016fc7c7ace39d3c95832b0aea6a51ec867431d757598364950dfdcea889e27db1c5a9b2d28e59e36b4ca2328776328df676af4a37073a096dbf177dd9269553ad858722e8cac4991626682b4c8217dcb1884dae3ed422660784767145ebc617975d3478fcc80311bbc4dc6eec7a23b181a993451dce973bb8638ed9b251cf19acd8ae54dddf370ee3d76ede186271ccd841d961f21e1caa2f9514e272827a9d25555faebc5e547733a7e57222572219022ea79f1c2771e99897720658d98acb28f197b836dac334c47d8618be459437dc1614b5406cbd3b32b2281c3011aaea8d8ec5436b936846579b2bea5c733513ee26935758cd6cbca90becaf48d344a2575a27f256e9484d1d91ebe62b4325b31d277cc1ee38a37e13ecd5222be62ca79c8bb5b1c88211c2a329b4192c7e387a67b6fd4697a5a229d79d2a9377fbee69a92ad56086e7ef64b2fbc6971ed0d3f7136b0935a3e703cbcb67c2de4ed4d16a6b2afc52ea4fd83b9bf32cb637cf5d1b142720d9630a5e
+```
